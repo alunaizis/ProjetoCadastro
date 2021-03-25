@@ -44,8 +44,10 @@
   <div class="col-10">
     <input class="form-control" type="date" id="datadenascimento">
   </div>
-  <div class="row mt-5">
-    Todos os direitos reservados a Izis Carolaine Berson Parreão
+  <div class="row">
+  <a  href="{{ route('resultadoCadastro') }}" class="btn btn-primary">Salvar</a>
+            </div>
+    <center>Todos os direitos reservados a Izis Carolaine Berson Parreão<center>
     </div> 
 </div>
 </body>
