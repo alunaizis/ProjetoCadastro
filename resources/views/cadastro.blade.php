@@ -20,7 +20,7 @@
     Home
     </div> 
        <div class="row mt-5">
-       <h1>Calculadora</h1>
+       <h1>Cadastro</h1>
 <div class="form-group row">
   <label for="nomecompleto" class="col-2 col-form-label">Nome Completo</label>
   <div class="col-10">
