@@ -3,31 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Usuario;
 class CadastroController extends Controller
 {
     public function cadastro()
     {
         return view('cadastro');
     }
-    public function cadastrar(Request $request)
-    {
-        // dd($request->all());
-        $valor1 = $request->valor1; 
-        $valor2 = $request->valor2; 
-        $valor3 = $request->valor3;
-        $valor4 = $request->valor4;
-
-        return view('resultadoSoma', compact('valor1', 'valor2', 'resultado'));
-    }
+    
     public function welcome(){
         return view('welcome');
     }
-    public function resultadoCadastro(){
-        return view('resultadoCadastro');
+    public function resultadoCadastro(Request $request)
+    {
+       
+        $usuario = new Usuario();
+        $usuario->nome = $request->nome;
+        $usuario->senha = $request->senha; 
+        $usuario->matricula = $request->matricula;
+        $usuario->data_nasc = $request->data_nasc;
+        $usuario->save();
+      
+                    return view('usuario.show', compact('usuario'));
     }
     public function carregarlista(){
-        return view('listaCadastrados');
+        $usuario = Usuario::all();
+        return view('listaCadastrados', compact('usuario'));
     }
 
 }

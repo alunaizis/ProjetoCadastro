@@ -15,28 +15,24 @@
 </style>
 </head>
 <body>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Nome Completo </th>
-      <th scope="col">Data de Nascimento</th>
-      <th scope="col">Senha</th>
-      <th scope="col">Matricula</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach ($usuario as $usuario) 
-    <tr>
-      <th scope="row">{{$usuario->id}}</th>
-      <td>{{$usuario->nome}}</td>
-      <td>{{$usuario->data_nasc}}</td>
-      <td>{{$usuario->senha}}</td>
-      <td>{{$usuario->matricula}}</td>
-    </tr>
-    @endforeach 
-
-  </tbody>
-</table>
+   <div class="row">
+   <h1>Cadastro efetuado com sucesso</h1>
+   </div>
+   <div class="row">
+   <div class="col-md-2">Nome Completo</div>
+   <div class="col-md-10">{{ $usuario->nome}}</div> 
+   </div>
+   <div class="row">
+   <div class="col-md-2">Senha</div>
+   <div class="col-md-10">{{ $usuario->senha}}</div> 
+   </div>
+   <div class="row">
+   <div class="col-md-2">Matricula</div>
+   <div class="col-md-10">{{ $usuario->matricula}}</div> 
+   </div>
+   <div class="row">
+   <div class="col-md-2">Data de Nascimento</div>
+   <div class="col-md-10">{{ $usuario->data_nasc}}</div> 
+   </div>
 </body>
 </html>

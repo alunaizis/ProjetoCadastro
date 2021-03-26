@@ -21,34 +21,37 @@
     </div> 
        <div class="row mt-5">
        <h1>Cadastro</h1>
-<div class="form-group row">
+       <form method="POST" action="{{ route('resultadoCadastro') }}">
+       @csrf
   <label for="nomecompleto" class="col-2 col-form-label">Nome Completo</label>
   <div class="col-10">
-    <input class="form-control" type="text"  id="nomecompleto">
+    <input class="form-control" type="text"  id="nomecompleto" name="nome">
   </div>
 </div>
 <div class="form-group row">
   <label for="senha" class="col-2 col-form-label">Senha</label>
   <div class="col-10">
-    <input class="form-control" type="password"  id="senha">
+    <input class="form-control" type="password"  id="senha" name="senha">
   </div>
 </div>
 <div class="form-group row">
   <label for="matricula" class="col-2 col-form-label">Matricula</label>
   <div class="col-10">
-    <input class="form-control" type="number"  id="matricula">
+    <input class="form-control" type="number"  id="matricula"name="matricula">
   </div>
 </div>
 <div class="form-group row">
   <label for="datadenascimento" class="col-2 col-form-label">Data de Nascimento</label>
   <div class="col-10">
-    <input class="form-control" type="date" id="datadenascimento">
+    <input class="form-control" type="date" id="datadenascimento" name="data_nasc">
   </div>
   <div class="row">
-  <a  href="{{ route('resultadoCadastro') }}" class="btn btn-primary">Salvar</a>
-            </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+  </div>
+            </form>
     <center>Todos os direitos reservados a Izis Carolaine Berson Parreão<center>
     </div> 
+  
 </div>
 </body>
 </html>

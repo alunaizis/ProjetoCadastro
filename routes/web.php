@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get ('/', 'App\Http\Controllers\CadastroController@welcome')->name('welcome');
 
 Route::get ('/cadastro', 'App\Http\Controllers\CadastroController@cadastro')->name('carregarCadastro');
-Route::post ('/cadastrar', 'App\Http\Controllers\CadastroController@cadastrar')->name('cadastrar');
-Route::get ('/resultadoCadastro', 'App\Http\Controllers\CadastroController@resultadoCadastro')->name('resultadoCadastro');
-Route::get ('/carregarlista', 'App\Http\Controllers\CadastroController@carregarlista')->name('listaCadastro');
+
+
+Route::post ('/resultadoCadastro', 'App\Http\Controllers\CadastroController@resultadoCadastro')->name('resultadoCadastro');
+Route::get ('/carregarlista', 'App\Http\Controllers\CadastroController@carregarlista')->name('listaCadastro');  
