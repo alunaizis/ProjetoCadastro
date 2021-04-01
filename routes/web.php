@@ -20,3 +20,6 @@ Route::get ('/cadastro', 'App\Http\Controllers\CadastroController@cadastro')->na
 
 Route::post ('/resultadoCadastro', 'App\Http\Controllers\CadastroController@resultadoCadastro')->name('resultadoCadastro');
 Route::get ('/carregarlista', 'App\Http\Controllers\CadastroController@carregarlista')->name('listaCadastro');  
+Route::post ('/resultadoEdicao', 'App\Http\Controllers\CadastroController@salvarEdicao')->name('resultadoEdicao');
+Route::get ('usuario/editar/{id}', 'App\Http\Controllers\CadastroController@editarUsuario')->name('editarUsuario');
+Route::get ('usuario/excluirUsuario/{id}', 'App\Http\Controllers\CadastroController@excluirUsuario')->name('excluirUsuario');  
