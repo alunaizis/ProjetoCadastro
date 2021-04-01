@@ -30,6 +30,15 @@
 
             <a  href="{{ route('carregarCadastro') }}" class="btn btn-primary">Novo cadastro</a>
             </div>
+
+            <div class="row mt-2">
+            <a  href="{{ route('listaEndereco') }}" class="btn btn-primary">Lista de Endereço</a>
+            </div>
+
+            <div class="row mt-2">
+            <a  href="{{ route('novoEndereco') }}" class="btn btn-primary">Novo endereço</a>
+            </div>
+
     
     </div>
 
