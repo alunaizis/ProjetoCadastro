@@ -39,6 +39,11 @@
             <a  href="{{ route('novoEndereco') }}" class="btn btn-primary">Novo endereço</a>
             </div>
 
+            <div class="row mt-2">
+            <a  href="{{ route('createUsuario') }}" class="btn btn-primary">Cadastro Completo</a>
+            </div>
+
+
     
     </div>
 

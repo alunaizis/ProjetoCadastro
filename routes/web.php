@@ -28,5 +28,12 @@ Route::post ('/resultado_endereco', 'App\Http\Controllers\EnderecoController@res
 Route::get ('/lista_endereco', 'App\Http\Controllers\EnderecoController@listaEndereco')->name('listaEndereco'); 
 Route::post ('/edicao_endereco', 'App\Http\Controllers\EnderecoController@edicaoEndereco')->name('edicaoEndereco');
 Route::get ('endereco/editarEndereco/{id}', 'App\Http\Controllers\EnderecoController@editarEndereco')->name('editarEndereco');
-Route::get ('endereco/excluirEndereco/{id}', 'App\Http\Controllers\EnderecoController@excluirEndereco')->name('excluirEndereco');  
+Route::get ('endereco/excluirEndereco/{id}', 'App\Http\Controllers\EnderecoController@excluirEndereco')->name('excluirEndereco');
+
+
+Route::prefix('usuario')->group(function (){ 
+    Route::get('create', 'App\Http\Controllers\NovoController@create')->name('createUsuario');
+    Route::post('save', 'App\Http\Controllers\NovoController@save')->name('saveUsuario');
+
+});
 
